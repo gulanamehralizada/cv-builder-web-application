@@ -1,4 +1,3 @@
-import React from 'react';
 import { WorkExperience } from '../types/cv';
 import { Briefcase, Plus, Trash2 } from 'lucide-react';
 
@@ -87,14 +86,14 @@ export default function WorkExperienceForm({ workExperience, onChange }: WorkExp
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
           <Briefcase className="w-5 h-5 text-blue-600" />
-          Work Experience
+          İş təcrübəsi
         </h2>
         <button
           onClick={addExperience}
           className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors flex items-center gap-2"
         >
           <Plus className="w-4 h-4" />
-          Add Experience
+          Təcrübə əlavə edin
         </button>
       </div>
 
@@ -102,7 +101,7 @@ export default function WorkExperienceForm({ workExperience, onChange }: WorkExp
         {workExperience.map((exp, index) => (
           <div key={exp.id} className="border border-gray-200 rounded-lg p-4">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-medium text-gray-800">Experience #{index + 1}</h3>
+              <h3 className="text-lg font-medium text-gray-800">Təcrübə #{index + 1}</h3>
               <button
                 onClick={() => removeExperience(exp.id)}
                 className="text-red-600 hover:text-red-800 transition-colors"
@@ -114,7 +113,7 @@ export default function WorkExperienceForm({ workExperience, onChange }: WorkExp
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Company *
+                  Şirkət *
                 </label>
                 <input
                   type="text"
@@ -128,7 +127,7 @@ export default function WorkExperienceForm({ workExperience, onChange }: WorkExp
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Position *
+                  Vəzifə *
                 </label>
                 <input
                   type="text"
@@ -142,7 +141,7 @@ export default function WorkExperienceForm({ workExperience, onChange }: WorkExp
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Start Date *
+                  Başlama tarixi *
                 </label>
                 <input
                   type="month"
@@ -155,7 +154,7 @@ export default function WorkExperienceForm({ workExperience, onChange }: WorkExp
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  End Date
+                  Bitmə tarixi
                 </label>
                 <input
                   type="month"
@@ -168,7 +167,7 @@ export default function WorkExperienceForm({ workExperience, onChange }: WorkExp
                   <input
                     type="checkbox"
                     checked={exp.current}
-                    onChange={(e) => updateExperience(exp.id, { 
+                    onChange={(e) => updateExperience(exp.id, {
                       current: e.target.checked,
                       endDate: e.target.checked ? '' : exp.endDate
                     })}
@@ -182,14 +181,14 @@ export default function WorkExperienceForm({ workExperience, onChange }: WorkExp
             <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
                 <label className="block text-sm font-medium text-gray-700">
-                  Key Responsibilities
+                  Əsas Məsuliyyətlər
                 </label>
                 <button
                   onClick={() => addResponsibility(exp.id)}
                   className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1"
                 >
                   <Plus className="w-3 h-3" />
-                  Add
+                  Əlavə edin
                 </button>
               </div>
               {exp.responsibilities.map((responsibility, respIndex) => (
@@ -216,14 +215,14 @@ export default function WorkExperienceForm({ workExperience, onChange }: WorkExp
             <div>
               <div className="flex items-center justify-between mb-2">
                 <label className="block text-sm font-medium text-gray-700">
-                  Key Achievements
+                  Əsas Nailiyyətlər
                 </label>
                 <button
                   onClick={() => addAchievement(exp.id)}
                   className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1"
                 >
                   <Plus className="w-3 h-3" />
-                  Add
+                  Əlavə edin
                 </button>
               </div>
               {exp.achievements.map((achievement, achIndex) => (

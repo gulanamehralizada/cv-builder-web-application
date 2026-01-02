@@ -1,4 +1,3 @@
-import React from 'react';
 import { Certificate } from '../types/cv';
 import { Award, Plus, Trash2, ExternalLink } from 'lucide-react';
 
@@ -32,14 +31,14 @@ export default function CertificatesForm({ certificates, onChange }: Certificate
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
           <Award className="w-5 h-5 text-blue-600" />
-          Certificates & Courses
+          Sertifikatlar və Kurslar
         </h2>
         <button
           onClick={addCertificate}
           className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors flex items-center gap-2"
         >
           <Plus className="w-4 h-4" />
-          Add Certificate
+          Sertifikat əlavə edin
         </button>
       </div>
 
@@ -47,7 +46,7 @@ export default function CertificatesForm({ certificates, onChange }: Certificate
         {certificates.map((cert, index) => (
           <div key={cert.id} className="border border-gray-200 rounded-lg p-4">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-medium text-gray-800">Certificate #{index + 1}</h3>
+              <h3 className="text-lg font-medium text-gray-800">Sertifikat #{index + 1}</h3>
               <button
                 onClick={() => removeCertificate(cert.id)}
                 className="text-red-600 hover:text-red-800 transition-colors"
@@ -59,7 +58,7 @@ export default function CertificatesForm({ certificates, onChange }: Certificate
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Certificate/Course Name *
+                  Sertifikat/Kursun Adı *
                 </label>
                 <input
                   type="text"
@@ -73,7 +72,7 @@ export default function CertificatesForm({ certificates, onChange }: Certificate
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Issuing Organization *
+                  Qurumun adı *
                 </label>
                 <input
                   type="text"
@@ -87,7 +86,7 @@ export default function CertificatesForm({ certificates, onChange }: Certificate
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Issue Date *
+                  Buraxılış tarixi *
                 </label>
                 <input
                   type="month"
@@ -101,7 +100,7 @@ export default function CertificatesForm({ certificates, onChange }: Certificate
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   <ExternalLink className="w-4 h-4 inline mr-1" />
-                  Certificate URL (optional)
+                  Sertifikat URL-i (isteğe bağlı)
                 </label>
                 <input
                   type="url"
@@ -117,7 +116,7 @@ export default function CertificatesForm({ certificates, onChange }: Certificate
         {certificates.length === 0 && (
           <div className="text-center py-8 text-gray-500">
             <Award className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-            <p>No certificates added yet. Click "Add Certificate" to get started.</p>
+            <p>Hələ heç bir sertifikat əlavə edilməyib. Başlamaq üçün "Sertifikat əlavə et" düyməsini basın.</p>
           </div>
         )}
       </div>

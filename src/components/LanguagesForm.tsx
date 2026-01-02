@@ -1,4 +1,3 @@
-import React from 'react';
 import { Language } from '../types/cv';
 import { Globe, Plus, Trash2 } from 'lucide-react';
 
@@ -30,19 +29,19 @@ export default function LanguagesForm({ languages, onChange }: LanguagesFormProp
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
           <Globe className="w-5 h-5 text-blue-600" />
-          Languages
+          Dillər
         </h2>
         <button
           onClick={addLanguage}
           className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors flex items-center gap-2"
         >
           <Plus className="w-4 h-4" />
-          Add Language
+          Dil əlavə edin
         </button>
       </div>
 
       <div className="space-y-3">
-        {languages.map((language, index) => (
+        {languages.map((language) => (
           <div key={language.id} className="flex items-center gap-3 p-3 border border-gray-200 rounded-lg">
             <div className="flex-1">
               <input
@@ -59,10 +58,10 @@ export default function LanguagesForm({ languages, onChange }: LanguagesFormProp
                 onChange={(e) => updateLanguage(language.id, { proficiency: e.target.value as Language['proficiency'] })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                <option value="basic">Basic</option>
-                <option value="conversational">Conversational</option>
-                <option value="fluent">Fluent</option>
-                <option value="native">Native</option>
+                <option value="basic">Əsas</option>
+                <option value="conversational">Danışıq</option>
+                <option value="fluent">Səlis</option>
+                <option value="native">Doğma</option>
               </select>
             </div>
             <button
@@ -76,7 +75,7 @@ export default function LanguagesForm({ languages, onChange }: LanguagesFormProp
         {languages.length === 0 && (
           <div className="text-center py-8 text-gray-500">
             <Globe className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-            <p>No languages added yet. Click "Add Language" to get started.</p>
+            <p>Hələ heç bir dil əlavə edilməyib. Başlamaq üçün "Dil əlavə et" düyməsini basın.</p>
           </div>
         )}
       </div>

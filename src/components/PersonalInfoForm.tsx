@@ -28,17 +28,17 @@ export default function PersonalInfoForm({ personalInfo, onChange }: PersonalInf
     <div className="bg-white rounded-lg shadow-md p-6">
       <h2 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
         <User className="w-5 h-5 text-blue-600" />
-        Personal Information
+        Şəxsi məlumat
       </h2>
-      
+
       <div className="space-y-4">
         <div className="flex items-center gap-4 mb-6">
           <div className="relative">
             <div className="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
               {personalInfo.profilePhoto ? (
-                <img 
-                  src={personalInfo.profilePhoto} 
-                  alt="Profile" 
+                <img
+                  src={personalInfo.profilePhoto}
+                  alt="Profile"
                   className="w-full h-full object-cover"
                 />
               ) : (
@@ -54,16 +54,16 @@ export default function PersonalInfoForm({ personalInfo, onChange }: PersonalInf
           </div>
           <div className="flex-1">
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Profile Photo
+              Profil şəkli
             </label>
-            <p className="text-xs text-gray-500">Click the circle to upload your photo</p>
+            <p className="text-xs text-gray-500">Şəkilinizi yükləmək üçün dairəyə klikləyin</p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Full Name *
+              Tam adı *
             </label>
             <input
               type="text"
@@ -78,7 +78,7 @@ export default function PersonalInfoForm({ personalInfo, onChange }: PersonalInf
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               <Phone className="w-4 h-4 inline mr-1" />
-              Phone Number *
+              Telefon nömrəsi *
             </label>
             <input
               type="tel"
@@ -93,7 +93,7 @@ export default function PersonalInfoForm({ personalInfo, onChange }: PersonalInf
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               <Mail className="w-4 h-4 inline mr-1" />
-              Email Address *
+              E-poçt ünvanı *
             </label>
             <input
               type="email"
@@ -108,7 +108,7 @@ export default function PersonalInfoForm({ personalInfo, onChange }: PersonalInf
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               <MapPin className="w-4 h-4 inline mr-1" />
-              Address
+              Ünvan
             </label>
             <input
               type="text"
@@ -122,7 +122,7 @@ export default function PersonalInfoForm({ personalInfo, onChange }: PersonalInf
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               <Linkedin className="w-4 h-4 inline mr-1" />
-              LinkedIn Profile
+              LinkedIn Profili
             </label>
             <input
               type="url"
@@ -136,7 +136,7 @@ export default function PersonalInfoForm({ personalInfo, onChange }: PersonalInf
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               <Github className="w-4 h-4 inline mr-1" />
-              GitHub Profile
+              GitHub Profili
             </label>
             <input
               type="url"

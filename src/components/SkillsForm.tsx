@@ -1,4 +1,3 @@
-import React from 'react';
 import { Skill } from '../types/cv';
 import { Code, Users, Plus, Trash2 } from 'lucide-react';
 
@@ -33,7 +32,7 @@ export default function SkillsForm({ skills, onChange }: SkillsFormProps) {
     <div className="bg-white rounded-lg shadow-md p-6">
       <h2 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
         <Code className="w-5 h-5 text-blue-600" />
-        Skills
+        Bacarıqlar
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -42,14 +41,14 @@ export default function SkillsForm({ skills, onChange }: SkillsFormProps) {
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-medium text-gray-700 flex items-center gap-2">
               <Code className="w-4 h-4" />
-              Technical Skills
+              Texniki Bacarıqlar
             </h3>
             <button
               onClick={() => addSkill('technical')}
               className="bg-blue-600 text-white px-3 py-1 rounded-md hover:bg-blue-700 transition-colors flex items-center gap-1 text-sm"
             >
               <Plus className="w-3 h-3" />
-              Add
+              Əlavə et
             </button>
           </div>
           <div className="space-y-3">
@@ -67,10 +66,10 @@ export default function SkillsForm({ skills, onChange }: SkillsFormProps) {
                   onChange={(e) => updateSkill(skill.id, { level: e.target.value as Skill['level'] })}
                   className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
-                  <option value="beginner">Beginner</option>
-                  <option value="intermediate">Intermediate</option>
-                  <option value="advanced">Advanced</option>
-                  <option value="expert">Expert</option>
+                  <option value="beginner">Başlanğıc</option>
+                  <option value="intermediate">Orta</option>
+                  <option value="advanced">Qabaqcıl</option>
+                  <option value="expert">Ekspert</option>
                 </select>
                 <button
                   onClick={() => removeSkill(skill.id)}
@@ -81,7 +80,7 @@ export default function SkillsForm({ skills, onChange }: SkillsFormProps) {
               </div>
             ))}
             {technicalSkills.length === 0 && (
-              <p className="text-gray-500 text-sm">No technical skills added yet.</p>
+              <p className="text-gray-500 text-sm">Hələ heç bir texniki bacarıq əlavə edilməyib.</p>
             )}
           </div>
         </div>
@@ -91,14 +90,14 @@ export default function SkillsForm({ skills, onChange }: SkillsFormProps) {
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-medium text-gray-700 flex items-center gap-2">
               <Users className="w-4 h-4" />
-              Soft Skills
+              Yumşaq bacarıqlar
             </h3>
             <button
               onClick={() => addSkill('soft')}
               className="bg-blue-600 text-white px-3 py-1 rounded-md hover:bg-blue-700 transition-colors flex items-center gap-1 text-sm"
             >
               <Plus className="w-3 h-3" />
-              Add
+              Əlavə et
             </button>
           </div>
           <div className="space-y-3">
@@ -116,10 +115,10 @@ export default function SkillsForm({ skills, onChange }: SkillsFormProps) {
                   onChange={(e) => updateSkill(skill.id, { level: e.target.value as Skill['level'] })}
                   className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
-                  <option value="beginner">Beginner</option>
-                  <option value="intermediate">Intermediate</option>
-                  <option value="advanced">Advanced</option>
-                  <option value="expert">Expert</option>
+                  <option value="beginner">Başlanğıc</option>
+                  <option value="intermediate">Orta</option>
+                  <option value="advanced">Qabaqcıl</option>
+                  <option value="expert">Ekspert</option>
                 </select>
                 <button
                   onClick={() => removeSkill(skill.id)}
@@ -130,7 +129,7 @@ export default function SkillsForm({ skills, onChange }: SkillsFormProps) {
               </div>
             ))}
             {softSkills.length === 0 && (
-              <p className="text-gray-500 text-sm">No soft skills added yet.</p>
+              <p className="text-gray-500 text-sm">Hələ yumşaq bacarıqlar əlavə edilməyib.</p>
             )}
           </div>
         </div>

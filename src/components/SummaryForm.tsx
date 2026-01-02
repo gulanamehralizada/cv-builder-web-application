@@ -1,4 +1,3 @@
-import React from 'react';
 import { FileText } from 'lucide-react';
 
 interface SummaryFormProps {
@@ -11,12 +10,12 @@ export default function SummaryForm({ summary, onChange }: SummaryFormProps) {
     <div className="bg-white rounded-lg shadow-md p-6">
       <h2 className="text-xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
         <FileText className="w-5 h-5 text-blue-600" />
-        Professional Summary
+        Peşəkar Xülasə
       </h2>
-      
+
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          Write a brief professional summary (2-3 sentences)
+          Qısa peşəkar xülasə yazın (2-3 sentences)
         </label>
         <textarea
           value={summary}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Education } from '../types/cv';
 import { GraduationCap, Plus, Trash2 } from 'lucide-react';
 
@@ -59,14 +58,14 @@ export default function EducationForm({ education, onChange }: EducationFormProp
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
           <GraduationCap className="w-5 h-5 text-blue-600" />
-          Education
+          Təhsil
         </h2>
         <button
           onClick={addEducation}
           className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors flex items-center gap-2"
         >
           <Plus className="w-4 h-4" />
-          Add Education
+          Təhsil əlavə edin
         </button>
       </div>
 
@@ -74,7 +73,7 @@ export default function EducationForm({ education, onChange }: EducationFormProp
         {education.map((edu, index) => (
           <div key={edu.id} className="border border-gray-200 rounded-lg p-4">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-medium text-gray-800">Education #{index + 1}</h3>
+              <h3 className="text-lg font-medium text-gray-800">Təhsil #{index + 1}</h3>
               <button
                 onClick={() => removeEducation(edu.id)}
                 className="text-red-600 hover:text-red-800 transition-colors"
@@ -86,7 +85,7 @@ export default function EducationForm({ education, onChange }: EducationFormProp
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  School/University *
+                  Təhsil aldığınız qurum *
                 </label>
                 <input
                   type="text"
@@ -100,7 +99,7 @@ export default function EducationForm({ education, onChange }: EducationFormProp
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Degree/Program *
+                  Dərəcə/Proqram *
                 </label>
                 <input
                   type="text"
@@ -114,7 +113,7 @@ export default function EducationForm({ education, onChange }: EducationFormProp
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Start Date *
+                  Başlama tarixi *
                 </label>
                 <input
                   type="month"
@@ -127,7 +126,7 @@ export default function EducationForm({ education, onChange }: EducationFormProp
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  End Date *
+                  Bitmə tarixi *
                 </label>
                 <input
                   type="month"
@@ -142,14 +141,14 @@ export default function EducationForm({ education, onChange }: EducationFormProp
             <div>
               <div className="flex items-center justify-between mb-2">
                 <label className="block text-sm font-medium text-gray-700">
-                  Certifications/Honors
+                  Sertifikatlar
                 </label>
                 <button
                   onClick={() => addCertification(edu.id)}
                   className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1"
                 >
                   <Plus className="w-3 h-3" />
-                  Add
+                  Əlavə et
                 </button>
               </div>
               {edu.certifications.map((cert, certIndex) => (
